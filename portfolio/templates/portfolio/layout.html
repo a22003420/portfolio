@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    {% load static %}  
+    <link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/estilos_index.css' %}" media="screen" />
+</head>
+
+<body>
+    <header>
+        <style display:flex;justify-content:spacebetween></style>
+        <div>João Pedro Matos</div>
+        <nav>
+            <a href="{% url 'portfolio:home' %}">portfolio</a>      
+            <a href="{% url 'portfolio:mim' %}">sobre mim</a>      
+            <a href="{% url 'portfolio:projectos' %}">projetos</a> 
+            <a href="{% url 'portfolio:pw' %}">programação Web</a>      
+            <a href="{% url 'portfolio:blog' %}">blog</a> 
+            <a href="{% url 'portfolio:website' %}">sobre este website</a>          
+            <a href="{% url 'portfolio:contacto' %}">contacto</a>
+            <a href="{% url 'portfolio:rodape' %}">rodapé</a>      
+        </nav>   
+        
+    </style>
+
+    </header>
+
+
+	<main>
+
+        {% block main %}
+
+
+
+
+
+
+
+
+        {% endblock main %}
+
+
+    </main>
+
+
+
+    <div>
+        <footer class="footerClass">Página feita por: João Matos, LEI, 2022</footer>
+    </div>
+
+</body>
+
+
+</html>
