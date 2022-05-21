@@ -6,73 +6,35 @@
 
 
 {% block main %}
-<!DOCTYPE html>
-<html lang="pt">
-<header>
-    <meta charset="UTF-8">
-    <meta name="author" content="João Matos">
-    <meta name="keywords" content="palavras chave">
-    <meta name="description" content="Website sobre Lisboa">
-    <link rel="shortcut icon" type="image/x-icon" href="images/Portugal.ico" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;1,100;1,300;1,400&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="estilos.css" media="screen" />
-    <title>Lisboa</title>
-    <h3>Lisboa</h3>
-</header>
+
 <main>
 
-    <body style="background-color:peachpuff">
-        <img src="images/Lisboa.png">
+        <h3>Quizz sobre Programação Web</h3>
         <br>
-        <nav>
-            &#128077;<a href="index.html">Introdução</a> | &#9996;<a href="local.html">Localização</a> | &#10004;<b><a
-                    href="multimedia.html">Multimédia</a></b> | &#128269;<a href="info.html">Informações</a> |
-            &#128654;<a href="../index.html">Home</a> | &#127969;<a href="quizz.html" id="color_">Quizz</a> |
-            &#127774;<a href="html5-css.html">Página HTML5 & CSS</a></a>
-        </nav>
+        
 
-        <h3>Quizz</h3>
+        
 
-        <p>
-            Nesta página será feito um quizz para testar se o utilizador conhece bem a cidade que a página apresenta
-            &#128512;
-        </p>
-
-        <form method="POST" action="mailto: jpcamatos31@gmail.com" enctype="multipart/form-data">
-            <fieldset target="color_background">
-
-                <legend>City quizz</legend>
-                <fieldset id="color_background_1">
-
+                
                     <section>
-                        <h4><u>info</u></h4>
-                        <p id="conteudo">Nome: <input type="text" name="nome" autocomplete="on" required autofocus></p>
-                        <p id="conteudo">Apelido: <input type="text" name="apelido" autocomplete="on" required
-                                autofocus></p>
-                        <p id="conteudo">Telefone: <input type="text" name="telefone" maxlength="12" size="12" required
-                                autofocus> </p>
-                        <p id="conteudo">Coloca uma ou várias fotografias suas <input type="file" name="img" multiple>
-                        </p>
-                        <input type="image" src="images/botão_submit.jpg" alt="Submit" width="48" height="48" required
-                            autofocus>
+                        <h4><u>Info</u></h4>
+                        <p id="conteudo">Nome: <input type="text" name="nome" autocomplete="on" required autofocus></p>                                             
+                        <br>
+                        
                     </section>
 
                     <fieldset id="color_background_2">
                         <br>
-                        <h4><u>perguntas</u></h4>
-
+                        <h3><u>Perguntas</u></h4>
+                        <br>
 
                         <label>
-                            <h4>Qual o monumento mais antigo</h4>
-                            <input type="radio" name="answer 1" value="Torre de Belém">Torre de Belém
-                            <input type="radio" name="answer 2" value="Mosteiro dos Jerónimos">Mosteiro dos Jerónimos
-                            <input type="radio" name="answer 3" value="Elevador de Santa Justa ">Elevador de Santa Justa
-                            <input type="radio" name="answer 4" value="Padrão dos Descobrimentos ">Padrão dos
-                            Descobrimentos
+                            <h4>Q1. Qual é a forma correta de fazer um comentário em Python?</h4>
+                            <input type="radio" name="question1" value="op2">Torre de Belém
+                            <input type="radio" name="question1" value="Mosteiro dos Jerónimos">Mosteiro dos Jerónimos
+                            <input type="radio" name="question1" value="Elevador de Santa Justa ">Elevador de Santa Justa
+                            <input type="radio" name="question1" value="Padrão dos Descobrimentos ">Padrão dos
+                            
                             <br>
                             <br>
                         </label>
