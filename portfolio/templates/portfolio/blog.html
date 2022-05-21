@@ -1,21 +1,18 @@
 {% extends 'portfolio/layout.html' %}
 
-<!DOCTYPE html>
-{% load static %}
-<html>
 
-    <!DOCTYPE html>
-    <html>
-    <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
-    <body>
+{% load static %}  
+
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/estilos_blog.css' %}" media="screen" />    
+{% endblock %}
+
 
 
 {% block main %}
 
 <div class="header">
-    <h2>Blog Name</h2>
+    <h2>Blog Name ALex</h2>
   </div>
   
   <div class="row">
@@ -63,10 +60,7 @@
 
 
 
-  {% load static %}
-  <link rel="stylesheet" href="{% static 'portfolio/css/estilos_blog.css' %}">
-</body>
-</html>
+
 
 
 
