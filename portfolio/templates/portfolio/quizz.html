@@ -1,15 +1,18 @@
 {% extends 'portfolio/layout.html' %}
 
+{% load static %}
 
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/quizz_1.css' %}" media="screen" />
 
-
+{% endblock %}
 
 
 {% block main %}
 
 <main>
-
-        <h3>Quizz sobre Programação Web</h3>
+    <div class="ajuste">
+        <h1><u>Quizz sobre Programação Web</u></h1>
         <br>
         
 
@@ -17,20 +20,20 @@
 
                 
                     <section>
-                        <h3><u>Info</u></h3>
+                        <h3>&#10156; Preenche o nome em baixo para registo</h3>
                         <br>
                         <p id="conteudo">Nome: <input type="text" name="nome" autocomplete="on" required autofocus></p>                                             
                         <br>
                         
                     </section>
-
-                    <fieldset id="color_background_2">
+    </div>
+                    <fieldset>
                         <br>
-                        <h3><u>Breve Questionário</u></h4>
+                        <h3><u>&#9758; Breve Questionário &#9756;</u></h4>
                         <br>
 
                         <label>
-                            <h4>Questão-1: Seleciona qual das opções em baixo é a correcta</h4>
+                            <h4>&#10112; Seleciona qual das opções em baixo é a correcta</h4>
                             <br>
                             <input type="radio" name="question1" value="q1"> Hypertext MinimumLanguage
                             <input type="radio" name="question1" value="q2"> Hypertext Markup Language
@@ -42,7 +45,7 @@
                         </label>
 
                         <label>
-                            <h4>Questão-2: Que extensão devem ter os ficheiros HTML?</h4>
+                            <h4>&#10113; Que extensão devem ter os ficheiros HTML?</h4>
                             <br>
                             <input type="radio" name="question2" value="q1"> .html
                             <input type="radio" name="question2" value="q2"> .h
@@ -54,7 +57,7 @@
                         </label>
 
                         <label>
-                            <h4>Questão-3: Queremos imprimir "Hello World" em Python, qual a opção correcta?</h4>
+                            <h4>&#10114; Queremos imprimir "Hello World" em Python, qual a opção correcta?</h4>
                             <br>
                             <input type="radio" name="question3" value="q1"> ("Hello World")
                             <input type="radio" name="question3" value="q2"> print "Hello World"
@@ -66,7 +69,7 @@
                         </label>
 
                         <label>
-                            <h4>Questão-4: Seleciona qual das opções em baixo é a correcta. Uma ajuda preciosa -> estamos a trabalhar em Python &#128512;</h4>
+                            <h4>&#10115; Seleciona qual das opções em baixo é a correcta. Uma ajuda preciosa -> estamos a trabalhar em Python &#128512;</h4>
                             <br>
                             <input type="radio" name="question4" value="q1"> // Um comentário
                             <input type="radio" name="question4" value="q2"> /* Um comentário */
@@ -80,7 +83,7 @@
 
                             
 
-                            <div class="form-group">
+                            <div>
                                 <a href="{% url 'portfolio:home' %}" role="button" class="btn btn-warning">Cancelar</a>
                                 <input class="btn btn-success" type="submit" value="Submeter">
 
@@ -107,8 +110,3 @@
 
 
 
-{% load static %}
-<img src="{% static 'portfolio/images/image1.png' %}">
-
-{% load static %}
-<link rel="stylesheet" href="{% static 'portfolio/css/base.css' %}">
