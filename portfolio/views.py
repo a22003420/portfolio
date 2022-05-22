@@ -2,7 +2,7 @@ from multiprocessing import context
 from django.shortcuts import render
 from datetime import datetime
 from matplotlib import pyplot as plt
-
+import datetime
 
 
 
@@ -17,17 +17,19 @@ def projects_page(request):
 	return render(request, 'portfolio/projectos.html')
 
 
-def pw_page(request):
-	return render(request, 'portfolio/pw.html')
-
-
-def blog_page(request):
-	
-	return render(request, 'portfolio/blog.html')
-
 
 def about_page(request):
-	return render(request, 'portfolio/website.html')
+    now = datetime.datetime.now()
+    local = "Lisboa, Portugal Continental"
+
+    context = {
+        'dataHora': now,
+        'local': local
+    }
+
+    return render(request, 'portfolio/website.html', context)
+
+
 
 def quizz_page(request):
     if request.method == 'POST':
@@ -44,13 +46,13 @@ def quizz_page(request):
 
 def pontuacao_quizz(request):
     pontos = 0
-    if request.POST['pergunta1'] == 'op2':
+    if request.POST['question1'] == 'q2':
         pontos += 25
-    if request.POST['pergunta2'] == 'op1':
+    if request.POST['question2'] == 'q1':
         pontos += 25
-    if request.POST['pergunta3'] == 'op3':
+    if request.POST['question3'] == 'q3':
         pontos += 25
-    if request.POST['pergunta4'] == 'op3':
+    if request.POST['question4'] == 'q3':
         pontos += 25
     return pontos
 
@@ -65,14 +67,9 @@ def desenha_grafico_resultados():
 def home_page_view(request):
 	return render(request, 'portfolio/home.html')
 
-def contacto_page_view(request):
-	nome="Matos"
-	data = datetime.now()
-
-	contexto={"nome":nome, 'hora': data}
-	return render(request,'portfolio/contacto.html',contexto)
+def blog_page(request):
+  
+  
+    return render(request, 'portfolio/blog.html')
 
 
-
-def footer_page(request):
-	return render(request, 'portfolio/rodape.html')

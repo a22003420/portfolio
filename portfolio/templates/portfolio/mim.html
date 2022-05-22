@@ -1,13 +1,59 @@
 {% extends 'portfolio/layout.html' %}
 
 
+{% load static %}  
 
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/estilos_aboutme.css' %}" media="screen" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
 
+{% endblock %}
 
 
 {% block main %}
-	<h1>Contacto</h1>
-    <p>olá {{ nome }}. São {{ hora }} horas.</p>
+
+
+
+<div class = "about-wrapper">
+    <div class = "about-left">
+      <div class = "about-left-content">
+        <div>
+          <div class = "shadow">
+            <div class = "about-img">
+                <a href="https://imgbb.com/"><img src="https://i.ibb.co/sqFy4sf/minha.jpg" alt="minha" border="0" /></a>
+            </div>
+          </div>
+
+          <h2>João Pedro Matos (a22003420)</h2>
+          <h3>Estudante de Engenharia Informática</h3>
+        </div>
+        
+
+        <ul class = "icons">
+          <li><i class = "fab fa-linkedin" onclick="document.location='https://www.linkedin.com/in/joão-matos-69b875150'"></i></i></li>
+        </ul>
+      </div>
+      
+    </div>
+
+    <div class = "about-right">
+      <h1>Olá<span>!</span></h1>
+      <h2>Queres saber mais sobre mim?</h2>
+      <div class = "about-btns">
+        <button type = "button" class = "btn btn-pink"><a href="https://drive.google.com/file/d/1KoZZWEcc_RMelauJFLhItxjkSN0m7ubW/view?usp=sharing">Resume</a></button>
+        <button type = "button" class = "btn btn-pink"><a href="https://github.com/a22003420">Github</a></button>
+      </div>
+
+      <div class = "about-para">
+        <p>Tenho 30 anos, concluí o secundário no curso de Ciências e Tecnologias, estando atualmente em frequência no curso de Engenheira informática. A nível profissional, trabalho há cerca de 9 anos em telecomunicações, tendo adquirido um vasto conhecimento nesta área. Nos últimos anos tenho-me especializado na área de NI (Network Integration), trabalhando atualmente para a Telefonica UK (O2), via Genesis-tec. Passei, também, pela Nokia GDC Lisbon onde tive a oportunidade de trabalhar noutras áreas deste ramo e atuar em projetos dos mais variados países.
+
+            Nota que com o decorrer do curso superior, tenho adquirido um vasto "knowledge" em programação, nomeadamente em JAVA, C, Kotlin, Python (Programação Web) tendo desenvolvido programas com sucesso, até então. Num curto-médio prazo, penso que seja uma área que gostaria de aprofundar, bem como segurança informática com o intuito de adquirir ainda um maior conhecimento e quiçá, vir a trabalhar na mesma.</p>
+      </div>
+      
+    </div>
+  </div>
+
+
 {% endblock %}
 
 
@@ -22,3 +68,9 @@
 
 {% load static %}
 <link rel="stylesheet" href="{% static 'portfolio/css/base.css' %}">
+
+
+
+
+
+

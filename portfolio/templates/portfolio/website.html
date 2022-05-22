@@ -3,11 +3,55 @@
 
 
 
+{% load static %}  
+
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/estilos_aboutpage copy.css' %}" media="screen" />
+
+{% endblock %}
+
+
+
+
 
 
 {% block main %}
-	<h1>Contacto</h1>
-    <p>olá {{ nome }}. São {{ hora }} horas.</p>
+	
+
+
+    <section class="firstsection">
+        <div class="box-main">
+            <div class="firstHalf">
+                <h1 class="text-big" id="web">
+                    Programação Web
+                </h1>
+                 
+                <p class="text-small">
+                    Este site foi desenvolido no âmbito da cadeira de Programação Web.
+
+
+                </p>
+                
+ 
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<div class="title3">
+    <h2><a href="https://www.ulusofona.pt/licenciaturas/engenharia-informatica/programacao-web/ULHT260-11195">====Página da Cadeira===</a></h2>
+    
+   
+</div>
+
+<div class="title3">
+    <h2><p>{{ dataHora }} em {{ local }}.</p></h2>
+    
+
+</div>
+
+
 {% endblock %}
 
 

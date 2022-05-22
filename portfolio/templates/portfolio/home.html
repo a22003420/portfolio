@@ -1,11 +1,14 @@
 {% extends 'portfolio/layout.html' %}
-<!DOCTYPE html>
-{% load static %}
-<html>
 
 
 
 
+{% load static %}  
+
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/estilos_home.css' %}" media="screen" />
+
+{% endblock %}
 
 
 
@@ -20,35 +23,33 @@
     <div>
         <nav>
             <br>
-            <li> to do
-            </li>
             
-            <li>Optei por esta curso </li>
+            
+            <p class="change">&#10035; Optei por este curso, pois é uma área em constante evolução</p>
            
-            <li> daquilo que mais tem gostado de aprender no curso,</li>
+            <p class="change">&#10035; O curso está muito bem estruturado, conseguindo um overview de todo o ramo da informática</p>
             
-            <li> de espectativas do que gostaria de fazer quando acabar o curso.</li>
+            <p class="change"> &#10035; Gostaria de trabalhar em segurança informática quando terminar o curso</p>
                         
-            <li> de hobbies</li>
+            
             <br>
         </nav>
     </div>
 
-        <li>
-            <p>nome: João Matos</p>
-        </li>
-        <li>
-            <p>número de aluno: 22003420</p>
-        </li>
-        <li>
-            <p>curso: LEI&#128512;</p>
-        </li>
-        <li>
-            <p>ano: 2ºano; 2ºsemestre</p>
-        </li>
-        <li>
-            <p>Universidade: ULHT</p>
-        </li>
+       
+            <p class="change1">&#9755; nome: João Matos</p>
+        
+        
+            <p class="change1">&#9755; número de aluno: 22003420</p>
+       
+      
+            <p class="change1">&#9755; curso: LEI&#128512;</p>
+       
+      
+            <p class="change1">&#9755; ano: 2ºano; 2ºsemestre</p>
+        
+            <p class="change1">&#9755; Universidade: ULHT</p>
+        
     </ul>
 
     <div class="title3">
@@ -58,7 +59,7 @@
     </div>
 
     <div class="title3">
-        <h2><a href="https://github.com/a22003420">====MY GitHub Link====</a></h2>
+        <h2><a href="https://github.com/a22003420">====MY Projects====</a></h2>
         
         
     </div>
@@ -76,5 +77,3 @@
 {% load static %}
 <img src="{% static 'portfolio/images/image1.png' %}">
 
-{% load static %}
-<link rel="stylesheet" href="{% static 'portfolio/css/base.css' %}">
