@@ -13,8 +13,8 @@ def aboutme_page(request):
 	return render(request, 'portfolio/mim.html')
 
 
-def projects_page(request):
-	return render(request, 'portfolio/projectos.html')
+def lincenciatura_page(request):
+	return render(request, 'portfolio/licenciatura.html')
 
 
 
