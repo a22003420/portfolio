@@ -1,5 +1,6 @@
 # config/settings.py
 from environs import Env 
+import os
 
 env = Env()
 env.read_env()
@@ -44,7 +45,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'portfolio',
-    'whitenoise.runserver_nostatic', 
+    'whitenoise.runserver_nostatic',
+    
+    
+    
     ]
 
 MIDDLEWARE = [
@@ -57,6 +61,11 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
+
+
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
+MEDIA_URL = "/media/"
 
 ROOT_URLCONF = 'config.urls'
 
@@ -135,3 +144,9 @@ ALLOWED_HOSTS = ['.herokuapp.com', 'localhost', '127.0.0.1']
 STATIC_ROOT = str(BASE_DIR.joinpath('staticfiles'))
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+CLOUDINARY_STORAGE = {
+  'CLOUD_NAME': "jpcamatos31",
+  'API_KEY': "256298938597291",
+  'API_SECRET': "hwUpUdU766APREA4q5qnPBvP-uw",
+}

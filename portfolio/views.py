@@ -1,9 +1,7 @@
 from multiprocessing import context
 from django.shortcuts import render
 from datetime import datetime
-from matplotlib import pyplot as plt
 import datetime
-
 
 
 
@@ -72,4 +70,7 @@ def blog_page(request):
   
     return render(request, 'portfolio/blog.html')
 
+def resolution_path(instance, filename):
+    return f'users/{instance.id}/'
+    
 

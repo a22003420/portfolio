@@ -1,17 +1,81 @@
 {% extends 'portfolio/layout.html' %}
 
 
+
+
 {% load static %}  
 
 {% block style %}
+<link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/estilos_licenciatura.css' %}" media="screen" />
 
 {% endblock %}
+
+
+
+
 
 
 {% block main %}
+	
+
+
+    <section class="firstsection">
+        <div class="box-main">
+            <div class="firstHalf">
+                <h1 class="text-big" id="web">
+                    Universidade Lusófona - Licenciatura em Engenharia Informática
+                </h1>
+                <h3>
+                    <br>
+                    <p class="center"><u>Apresentação do Curso</u></p>
+                </h3>
+                 
+                <p class="text-small">
+                    O curso de licenciatura em Engenharia Informática da Universidade Lusófona forma licenciados capazes de assumir posições de destaque em projetos de engenharia informática ou equipas de desenvolvimento e consultadoria, na área da engenharia dos sistemas de informação, assumindo pela sua formação e atitude papéis relevantes na geração de inovação e riqueza. Nesse sentido, os estudantes obtêm as competências adequadas à conceção, realização e manutenção de sistemas informáticos, programação de aplicações e de sistemas, desenho arquiteturas de computação e comunicações, gestão de sistemas de informação e de conhecimento, assim como à compreensão e resolução dos problemas associados.
+
+
+                </p>
+                
+ 
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<div class="title3">
+    <h2><a href="https://www.ulusofona.pt/licenciaturas/engenharia-informatica#plano-estudos">====Cadeiras do Curso de Engenharia Informática na Universidade Lusófona====</a></h2>
+</div>
+    <div class="title4">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Ano</th>
+                    <th>Semestre</th>
+                    <th>Créditos</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for cadeira in cadeiras %}
+                    <tr>
+                        <td>{{ cadeira.nome }}</td>
+                        <td>{{ cadeira.ano}}</td>
+                        <td>{{ cadeira.semestre}}</td>
+                        <td>{{ cadeira.creditos }}</td>
+                       
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+    </div>
+   
+</div>
+
 
 {% endblock %}
-
 
 
 
