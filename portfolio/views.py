@@ -1,4 +1,7 @@
+from audioop import reverse
 from multiprocessing import context
+from django import views
+from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from datetime import datetime
 import datetime
@@ -73,4 +76,31 @@ def blog_page(request):
 def resolution_path(instance, filename):
     return f'users/{instance.id}/'
     
+def index(request):
+    if not request.user.is_authenticated:
+        return HttpResponseRedirect(reverse('login'))
+    return render (request,"users/user.html")
+
+def login_view(request):
+    if request.method =='Post':
+        username=request.POST['username']
+        password=request.POST['password']
+        user= authenticate (request,username=username,password=password)
+
+        if user is not None:
+            login(request,user)
+            return HttpResponseRedirect(reverse('index'))
+        else:
+            return render(request, "users/login.html", {
+                'message': "Invalid Credentials."
+            })
+    return render (request,"login.html")
+
+def logout_view(request):
+    logout(request)
+    return render (request,'login.html', {
+        "message": "Logged out."
+    })
+
+
 
