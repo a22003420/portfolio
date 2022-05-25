@@ -4,7 +4,7 @@
 {% load static %}  
 
 {% block style %}
-<link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/estilos_blogcopy2.css' %}" media="screen" />
+<link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/estilos_blogcopy3.css' %}" media="screen" />
 
 {% endblock %}
 
@@ -12,17 +12,29 @@
 
 {% block main %}
 
+{% for post in posts %}
 
-<h2>&#10155; Coloca um post no formulário que se segue</h2>
+<img src="{{post.foto.url}}" alt="retrato" width="250" height="250">
+
+<h2> {{ post.autor }} TEST
+
+
+
+</h2>
+
+{% endfor %}
+
 
 <div class="container">
-  <form action="" method="POST">
+  <h2>&#10155; Coloca um post no formulário que se segue</h2>
+  <form action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %} 
     <div class="row">
       <div class="col-25">
         <label for="fname">Título</label>
       </div>
       <div class="col-75">
-        <input type="text" id="texto" name="texto" placeholder="Coloca um texto">
+        <input type="text" id="subject" name="subject" placeholder="Coloca um texto">
       </div>
     </div>
     <div class="row">
@@ -35,33 +47,33 @@
     </div>
     <div class="row">
       <div class="col-25">
-        <label for="country">Descrição</label>
-      </div>
-      <div class="col-75">
-        <select id="nome" name="nome">
-          <option value=""></option>
-          <option value="Ana">Ana</option>
-          <option value="Maria">Maria</option>
-          <option value="José">José</option>
-        </select>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-25">
         <label for="subject">Texto</label>
       </div>
       <div class="col-75">
-        <textarea id="subject" name="subject" placeholder="Escreve aqui" style="height:200px"></textarea>
+        <textarea id="text" name="text" placeholder="Escreve aqui" style="height:200px"></textarea>
       </div>
     </div>
+     <div class="row">
+      <div class="col-25">
+        <label for="country">Coloca uma fotografia</label>
+      </div>
+      <div class="col-75">
+        <input type="file" name="image" placeholder="Coloca uma imagem">
+      </div>
+      </div>
+<br>
+<br>
     <div class="row">
-      <a href="{% url 'portfolio:home' %}" role="button" class="btn btn-warning">Cancelar</a>
-      <input type="submit" value="Submeter">
+      
+      <a href="{% url 'portfolio:home' %}" role="button" class="form-submit-button">Cancelar</a>
+      <input type="submit" value="Submeter" class="form-submit-button">
     </div>
+    
+   
   </form>
 </div>
 
-  
+
   {% endblock %}
 
 

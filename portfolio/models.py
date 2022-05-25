@@ -1,5 +1,6 @@
+from email.policy import default
 from django.db import models
-from matplotlib import pyplot as plt
+
 
 def resolution_path(instance, filename):
     return f'users/{instance.id}/'
@@ -7,9 +8,9 @@ def resolution_path(instance, filename):
 
 class Pessoa(models.Model):
     nome = models.CharField(max_length=40, unique=True)
-    foto = models.ImageField(upload_to=resolution_path) 
+    webPage = models.URLField(null=True,blank=True)
 
-class Professor(models.Model):
+class Tecnologia(models.Model):
     nome = models.CharField(max_length=20, unique=True)
 
 class Competencia(models.Model):
@@ -28,8 +29,9 @@ class Post (models.Model):
      data=models.DateField(auto_now_add=True)
      titulo=models.CharField(max_length=20)
      descricao=models.TextField()    
-     link=models.URLField(max_length=50,null=True,blank=True)
-     docente_teorica = models.ForeignKey(Professor, on_delete=models.CASCADE)
+     link=models.URLField(null=True,blank=True)
+     foto = models.ImageField(upload_to=resolution_path,default="foto.png")
+     
 
 class Cadeira(models.Model):
 
@@ -52,12 +54,15 @@ class Cadeira(models.Model):
         (3, '3º ano'),
     )
 
+
+
      nome = models.CharField(max_length=20)
      ano = models.IntegerField(choices=ANO,default='1')
      titulo = models.CharField(max_length=50, unique=True)
+     ranking = models.PositiveIntegerField(default=3)
      descricao = models.TextField(max_length=300)
      competencias = models.ManyToManyField(Competencia) 
-     docente= models.ForeignKey(Professor, on_delete=models.CASCADE)
+     docente= models.ForeignKey(Pessoa, on_delete=models.CASCADE)
      creditos = models.IntegerField(choices=CREDITOS,default='6')
      semestre= models.PositiveSmallIntegerField(choices=SEMESTRE,default='1')
 

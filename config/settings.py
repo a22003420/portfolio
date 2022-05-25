@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'cloudinary_storage',
+    'cloudinary',
     'portfolio',
     'whitenoise.runserver_nostatic',
     
@@ -66,7 +68,7 @@ MIDDLEWARE = [
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
-MEDIA_URL = "/media/"
+MEDIA_URL = "/portfolio/"
 
 ROOT_URLCONF = 'config.urls'
 
@@ -151,3 +153,9 @@ CLOUDINARY_STORAGE = {
   'API_KEY': "256298938597291",
   'API_SECRET': "hwUpUdU766APREA4q5qnPBvP-uw",
 }
+
+
+LOGOUT_REDIRECT_URL = "/"
+LOGIN_REDIRECT_URL = "/"
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'

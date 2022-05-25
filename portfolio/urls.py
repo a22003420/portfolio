@@ -11,8 +11,7 @@ urlpatterns = [
     path('blog', views.blog_page, name='blog'),
     path('quizz', views.quizz_page, name='quizz'),
     path('website', views.about_page, name='website'),
-    path('login', views.login_view, name='login'),
-    path('login', views.logout_view, name='logout'),
+    
     
 
 ]

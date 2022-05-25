@@ -11,7 +11,7 @@ class PessoaAdmin(admin.ModelAdmin):
     list = ('nome',)
     search_list = ['nome'] 
 
-class ProfessorAdmin(admin.ModelAdmin):
+class TecnologiaAdmin(admin.ModelAdmin):
     list = ('nome',)
     search_list = ['nome']
 
@@ -31,6 +31,6 @@ class CompetenciaAdmin(admin.ModelAdmin):
 admin.site.register(Cadeira, CadeiraAdmin)
 admin.site.register(Pessoa, PessoaAdmin)
 admin.site.register(Competencia, CompetenciaAdmin)
-admin.site.register(Professor, ProfessorAdmin)
+admin.site.register(Tecnologia, TecnologiaAdmin)
 admin.site.register(Post, PostAdmin)
 

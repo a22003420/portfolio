@@ -1,7 +1,8 @@
 {% extends 'portfolio/layout.html' %}
 
 {% load static %}
-<form method = "post" enctype="multipart/form-data"> 
+
+
 {% block style %}
 <link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/quizz_2.css' %}" media="screen" />
 
@@ -18,7 +19,8 @@
 
         
 
-                
+        <form method = "post" enctype="multipart/form-data" action=""> 
+            {% csrf_token %}        
                     <section>
                         <h3>&#10156; Preenche o nome em baixo para registo</h3>
                         <br>
@@ -35,7 +37,7 @@
                         <label>
                             <h4>&#10112; Seleciona qual das opções em baixo é a correcta</h4>
                             <br>
-                            <input type="radio" name="question1" value="q1"> Hypertext MinimumLanguage
+                            <input type="radio" name="question1" value="q1" required> Hypertext MinimumLanguage
                             <input type="radio" name="question1" value="q2"> Hypertext Markup Language
                             <input type="radio" name="question1" value="q3"> Hypertext Markup Lang
                             <input type="radio" name="question1" value="q4"> Hypertext edium  Language
@@ -47,7 +49,7 @@
                         <label>
                             <h4>&#10113; Que extensão devem ter os ficheiros HTML?</h4>
                             <br>
-                            <input type="radio" name="question2" value="q1"> .html
+                            <input type="radio" name="question2" value="q1" required> .html
                             <input type="radio" name="question2" value="q2"> .h
                             <input type="radio" name="question2" value="q3"> .web
                             <input type="radio" name="question2" value="q4"> .page
@@ -59,7 +61,7 @@
                         <label>
                             <h4>&#10114; Queremos imprimir "Hello World" em Python, qual a opção correcta?</h4>
                             <br>
-                            <input type="radio" name="question3" value="q1"> ("Hello World")
+                            <input type="radio" name="question3" value="q1" required> ("Hello World")
                             <input type="radio" name="question3" value="q2"> print "Hello World"
                             <input type="radio" name="question3" value="q3"> print("Hello World")
                             <input type="radio" name="question3" value="q4"> p("Hello World");
@@ -71,7 +73,7 @@
                         <label>
                             <h4>&#10115; Seleciona qual das opções em baixo é a correcta. Uma ajuda preciosa -> estamos a trabalhar em Python &#128512;</h4>
                             <br>
-                            <input type="radio" name="question4" value="q1"> // Um comentário
+                            <input type="radio" name="question4" value="q1" required> // Um comentário
                             <input type="radio" name="question4" value="q2"> /* Um comentário */
                             <input type="radio" name="question4" value="q3"> # Um comentário
                             <input type="radio" name="question4" value="q4"> ** Um comentário **
@@ -88,12 +90,13 @@
                                 <input class="btn btn-success" type="submit" value="Submeter">
 
                     </fieldset>
-
+                </form>
                 
 
 
                     <div class="ajuste2">
                         <h2><u>&#128512; Vê a tua atual pontuação &#128512;</u></h2>
+                        <img src="{% static 'portfolio/images/grafico.png' %}" alt="">
                         <br>
                         
                 
@@ -106,7 +109,7 @@
                                     </section>
                     </div>
 
-
+                    
     
 </main>
 
