@@ -1,3 +1,3 @@
 Procfile
 -------------------------------
-web : gunicorn portfolio.wsgi --log-file -
+web: gunicorn config.wsgi --log-file -
