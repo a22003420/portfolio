@@ -44,26 +44,30 @@
 </div>
 
 <div class="title3">
-    <h2><a href="https://www.ulusofona.pt/licenciaturas/engenharia-informatica#plano-estudos">====Cadeiras do Curso de Engenharia Informática na Universidade Lusófona====</a></h2>
+    <h2><a href="https://www.ulusofona.pt/licenciaturas/engenharia-informatica#plano-estudos">====Cadeiras do Curso de Engenharia Informática na Universidade Lusófona (Clica-me!!)====</a></h2>
 </div>
     <div class="title4">
 
         <table>
             <thead>
                 <tr>
-                    <th>Nome</th>
-                    <th>Ano</th>
-                    <th>Semestre</th>
-                    <th>Créditos</th>
+                    <th style="text-align:center;">Nome</th>
+                    <th style="text-align:center;">Ano</th>
+                    <th style="text-align:center;">Semestre</th>
+                    <th style="text-align:center;">Créditos</th>
+                    <th style="text-align:center;">Ranking</th>
+                    <th style="text-align:center;">Breve Descrição</th>
                 </tr>
             </thead>
             <tbody>
                 {% for cadeira in cadeiras %}
                     <tr>
-                        <td>{{ cadeira.nome }}</td>
-                        <td>{{ cadeira.ano}}</td>
-                        <td>{{ cadeira.semestre}}</td>
-                        <td>{{ cadeira.creditos }}</td>
+                        <td style="text-align:center;">{{ cadeira.nome }}</td>
+                        <td style="text-align:center;">{{ cadeira.ano}}</td>
+                        <td style="text-align:center;">{{ cadeira.semestre}}</td>
+                        <td style="text-align:center;">{{ cadeira.creditos }}</td>
+                        <td style="text-align:center;">{{ cadeira.ranking }}</td>
+                        <td style="text-align:center;">{{ cadeira.descricao }}</td>
                        
                     </tr>
                 {% endfor %}

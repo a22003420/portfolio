@@ -12,12 +12,12 @@ h3{
 
 .ajuste2{
     
-    color:black;
+        color:black;
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 1rem;      
-        height: 10vh;
+        font-size: 1.2rem;      
+        height:12vh;
         opacity: 0.99;
         background-repeat: no-repeat;
         background-position: center;
@@ -26,12 +26,12 @@ h3{
 
 .ajuste3{
     
-    color:black;
+        color:black;
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 2rem;      
-        height: 40vh;
+        font-size: 1.8rem;      
+        height: 55vh;
         opacity: 0.99;
         background-repeat: no-repeat;
         background-position: center;

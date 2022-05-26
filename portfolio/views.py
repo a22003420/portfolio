@@ -68,7 +68,8 @@ def desenha_grafico_resultados():
     pontuacoes = [objeto.pontuacao for objeto in query]
     plt.barh(nomes, pontuacoes)
     plt.savefig('portfolio/static/portfolio/images/grafico.png', bbox_inches='tight')
-
+    plt.close()
+    
 def home_page_view(request):
 	return render(request, 'portfolio/home.html')
 

@@ -3,7 +3,7 @@ from django.db import models
 
 
 def resolution_path(instance, filename):
-    return f'users/{instance.id}/'
+    return 'images/{0}/'.format(filename)
 
 
 class Pessoa(models.Model):
@@ -56,7 +56,7 @@ class Cadeira(models.Model):
 
 
 
-     nome = models.CharField(max_length=20)
+     nome = models.CharField(max_length=100)
      ano = models.IntegerField(choices=ANO,default='1')
      titulo = models.CharField(max_length=50, unique=True)
      ranking = models.PositiveIntegerField(default=3)

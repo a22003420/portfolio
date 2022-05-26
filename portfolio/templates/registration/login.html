@@ -3,9 +3,10 @@
 {% load static %}
 
 {% block style %}
-
+<link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/estilos_login4.css' %}" media="screen" />
 
 {% endblock %}
+
 
 
 {% block main %}
@@ -14,10 +15,18 @@
     {% csrf_token %}
     <table>
       {{ form.as_p }}
+      
       <tr>
         <td>&nbsp;</td>
-        <td><input type="submit" value="Submit"></td>
+        
+        <br>
+        <a href="{% url 'portfolio:home' %}" role="button" class="form-submit-button">Cancelar</a>
+        <br>
+        <td><input type="submit" value="Entrar" class="form-submit-button"></td>
+        <br>
+      
       </tr>
+    
     </table>
   </form>
 

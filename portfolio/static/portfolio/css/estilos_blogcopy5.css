@@ -11,13 +11,18 @@ h2{
     
     color:black;
     display: flex;
-    justify-content:space-around;
+    justify-content:center;
     align-items: center;
     font-size: 1.2rem;      
     opacity: 0.99;
     background-repeat: no-repeat;
     background-position:center;
     background-size:cover;
+}
+
+.ajuste3{
+  background-color:white;
+  
 }
     
 .form-submit-button {
@@ -101,20 +106,24 @@ h2{
   }
 
   .card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,1);
     transition: 0.3s;
-    width: 40%;
-    border-radius: 5px;
+    width: 100%;
   }
   
   .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    box-shadow: 8px 8px 16px 0 rgba(0,0,0,0.2);
   }
   
   img {
     border-radius: 5px 5px 0 0;
   }
   
-  .container {
+  .container_v1{
     padding: 2px 16px;
+    background-color:khaki;
+  }
+
+  h3{
+    background-color:goldenrod;
   }

@@ -4,7 +4,7 @@
 {% load static %}  
 
 {% block style %}
-<link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/estilos_blogcopy3.css' %}" media="screen" />
+<link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/estilos_blogcopy5.css' %}" media="screen" />
 
 {% endblock %}
 
@@ -12,15 +12,22 @@
 
 {% block main %}
 
-{% for post in posts %}
+<div class="ajuste3">
 
-<img src="{{post.foto.url}}" alt="retrato" width="250" height="250">
+  {% for post in posts %}
+  <h3 style="text-align:center;">{{ post.titulo }}</h3>
+  <div class="card">
+    {% if post.foto %}
+    {{ post.foto.url }}
+    <img src="{{post.foto.url}}" alt="retrato" style="width:100%;text-align:center;">
+    {% endif%}
+  <div class="container_v1">
+    <h4 style="text-align:center;"><b>{{ post.autor }}</b></h4>
+    <p style="text-align:center;">{{ post.descricao }}</p>
+    <p style="text-align:center;">{{ post.data }}</p>
+  </div>
+</div>
 
-<h2> {{ post.autor }} TEST
-
-
-
-</h2>
 
 {% endfor %}
 
@@ -72,7 +79,7 @@
    
   </form>
 </div>
-
+</div>
 
   {% endblock %}
 

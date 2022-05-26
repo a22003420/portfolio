@@ -115,6 +115,7 @@ h2{
     border-radius: 5px 5px 0 0;
   }
   
-  .container {
+  .container_v1{
     padding: 2px 16px;
+    background-color: white;
   }
