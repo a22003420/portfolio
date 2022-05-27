@@ -33,8 +33,7 @@ SECRET_KEY = env.str("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env.bool("DEBUG", default=False)
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['.herokuapp.com', 'localhost', '127.0.0.1']
 
 # Application definition
 
@@ -45,10 +44,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'whitenoise.runserver_nostatic',
     'cloudinary_storage',
     'cloudinary',
     'portfolio',
-    'whitenoise.runserver_nostatic',
+    
     
     
     
@@ -143,7 +143,6 @@ STATIC_URL = '/portfolio/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-ALLOWED_HOSTS = ['.herokuapp.com', 'localhost', '127.0.0.1']
 
 STATIC_ROOT = str(BASE_DIR.joinpath('staticfiles'))
 
