@@ -60,11 +60,6 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-
-MEDIA_ROOT = os.path.join(BASE_DIR, "media")
-
-MEDIA_URL = "/portfolio/"
-
 ROOT_URLCONF = 'config.urls'
 
 TEMPLATES = [
@@ -116,9 +111,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
-LANGUAGE_CODE = 'pt'
+LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'Etc/GMT-1'
+TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
@@ -129,7 +124,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 STATIC_URL = '/portfolio/static/'
 # novo se a pasta static estiver na pasta da aplicação app, altere para str(BASE_DIR.joinpath('app/static'))
-STATICFILES_DIRS = [str(BASE_DIR.joinpath('static'))]
+STATICFILES_DIRS = [str(BASE_DIR.joinpath('portfolio/static'))]
 STATIC_ROOT = str(BASE_DIR.joinpath('staticfiles'))   # novo
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'  # novo
 
@@ -146,7 +141,10 @@ CLOUDINARY_STORAGE = {
 }
 
 
-LOGOUT_REDIRECT_URL = "/"
-LOGIN_REDIRECT_URL = "/"
+MEDIA_URL = "/portfolio/"
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+
+LOGOUT_REDIRECT_URL = "/"
+LOGIN_REDIRECT_URL = "/"
