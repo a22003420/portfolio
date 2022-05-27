@@ -16,6 +16,7 @@ from environs import Env
 import os
 
 
+
 env = Env()
 env.read_env()
 
@@ -141,7 +142,7 @@ CLOUDINARY_STORAGE = {
 }
 
 
-MEDIA_URL = "/portfolio/"
+MEDIA_URL = '/portfolio/'
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
