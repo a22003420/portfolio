@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 # config/settings.py
 from pathlib import Path
-from environs import Env 
+from environs import Env
 import os
 
 
@@ -36,29 +36,28 @@ DEBUG = env.bool("DEBUG", default=False)
 ALLOWED_HOSTS = ['.herokuapp.com', 'localhost', '127.0.0.1']
 
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
     'whitenoise.runserver_nostatic',
+    'django.contrib.staticfiles',
     'cloudinary_storage',
     'cloudinary',
     'portfolio',
-    ]
+]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 
@@ -80,7 +79,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
-        },  
+        },
     },
 ]
 
@@ -91,8 +90,8 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-      "default": env.dj_db_url("DATABASE_URL") 
- }
+    "default": env.dj_db_url("DATABASE_URL")
+}
 
 
 # Password validation
@@ -126,12 +125,13 @@ USE_I18N = True
 USE_TZ = True
 
 
-STATICFILES_DIRS = [str(BASE_DIR.joinpath('portfolio/static'))]
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
-
 STATIC_URL = '/portfolio/static/'
+# novo se a pasta static estiver na pasta da aplicação app, altere para str(BASE_DIR.joinpath('app/static'))
+STATICFILES_DIRS = [str(BASE_DIR.joinpath('static'))]
+STATIC_ROOT = str(BASE_DIR.joinpath('staticfiles'))   # novo
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'  # novo
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
@@ -139,14 +139,10 @@ STATIC_URL = '/portfolio/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-STATIC_ROOT = str(BASE_DIR.joinpath('staticfiles'))
-
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
 CLOUDINARY_STORAGE = {
-  'CLOUD_NAME': "jpcamatos31",
-  'API_KEY': "256298938597291",
-  'API_SECRET': "hwUpUdU766APREA4q5qnPBvP-uw",
+    'CLOUD_NAME': "jpcamatos31",
+    'API_KEY': "256298938597291",
+    'API_SECRET': "hwUpUdU766APREA4q5qnPBvP-uw",
 }
 
 
