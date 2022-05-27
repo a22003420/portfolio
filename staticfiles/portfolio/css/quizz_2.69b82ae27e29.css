@@ -1,0 +1,39 @@
+main{
+    background-color: white;
+    text-align: center;
+}
+h3{
+    text-align: center;
+}
+
+.ajuste{
+    background-color:whitesmoke;
+}
+
+.ajuste2{
+    
+    color:black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;      
+        height: 10vh;
+        opacity: 0.99;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+}
+
+.ajuste3{
+    
+    color:black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;      
+        height: 40vh;
+        opacity: 0.99;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+}

@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+* {
+  font-family: 'Syne Mono', monospace;
+  margin: 0;
+  box-sizing:border-box;
+  
+}
+
+.change{
+  font-size: large;
+  color: black;
+}
+.change1{
+  font-size: small;
+  color:black;
+}
+
+.footerClass{
+  text-align: right;
+  color: whitesmoke;
+  font-size: 1.5em;
+  background-color: black;
+  
+}
+
+.title{
+  
+  color:black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;      
+  height: 40vh;
+  background-image: url("../images/git1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  
+}
+
+header {
+  height: 10vh; 
+  background: purple;
+  color: white;
+  top: 0;  
+  
+  /* alinhando logo e menu */
+  display:flex;
+  background-color: purple;
+  justify-content: space-between;  
+  align-items: center;
+}
+
+
+header {
+  height: 10vh; 
+  background: purple;
+  color: white;
+  top: 0;  
+  
+  /* alinhando logo e menu */
+  display:flex;
+  justify-content: space-between;  
+  align-items: center;
+}
+
+header div {
+  font-size: 2em;  
+  padding: 1em;
+  color: black;
+  font-weight: bold;
+}
+
+header nav {
+  display:flex;
+  justify-content: flex-end;
+}
+
+main{
+  background-color: blueviolet;
+}
+
+
+nav a {
+  padding: 0 1em;
+  text-decoration: none;
+  font-size: 1rem;
+  color: lightgray;
+}
+
+.title2{
+  
+  color:whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;      
+  height: 25vh;
+  background-image: url("../images/git2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  
+}
+
+.title3{
+  
+  color:black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;      
+  height: 15vh;
+
+}
