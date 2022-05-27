@@ -12,10 +12,4 @@ urlpatterns = [
     path('blog', views.blog_page, name='blog'),
     path('quizz', views.quizz_page, name='quizz'),
     path('website', views.about_page, name='website'),
-    
-    
-
-]
-
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] 
