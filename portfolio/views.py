@@ -87,6 +87,7 @@ def blog_page(request):
 
         post = Post(autor=nome, titulo=titulo, descricao=texto, foto=imagem)
         post.save()
+        
 
     contexto = {"posts": Post.objects.all()}
 
