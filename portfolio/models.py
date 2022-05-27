@@ -3,7 +3,7 @@ from django.db import models
 
 
 def resolution_path(instance, filename):
-    return 'MEDIA/{0}/'.format(filename)
+    return 'images/{0}/'.format(filename)
 
 
 class Pessoa(models.Model):
