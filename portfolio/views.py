@@ -10,6 +10,10 @@ from matplotlib import pyplot as plt
 from django.contrib.auth import authenticate, login, logout
 from . models import *
 
+ 
+
+def api_page(request):
+    return render(request, 'portfolio/api.html')
 
 def aboutme_page(request):
     return render(request, 'portfolio/mim.html')
@@ -20,6 +24,12 @@ def lincenciatura_page(request):
     context = {"cadeiras": Cadeira.objects.all()}
 
     return render(request, 'portfolio/licenciatura.html', context)
+
+def projectos_page(request):
+
+    context = {"tfcs": TfcsDeisi.objects.all()}
+
+    return render(request, 'portfolio/projectos.html', context)
 
 
 def about_page(request):
@@ -89,6 +99,6 @@ def blog_page(request):
         post.save()
         
 
-    contexto = {"posts": Post.objects.all()}
+    context = {"posts": Post.objects.all()}
 
-    return render(request, 'portfolio/blog.html', contexto)
+    return render(request, 'portfolio/blog.html', context)

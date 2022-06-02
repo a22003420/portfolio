@@ -1,0 +1,92 @@
+{% extends 'portfolio/layout.html' %}
+
+
+
+
+{% load static %}  
+
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/estilos_licenciatura.css' %}" media="screen" />
+
+{% endblock %}
+
+
+
+
+
+
+{% block main %}
+	
+
+
+    <section class="firstsection">
+        <div class="box-main">
+            <div class="firstHalf">
+                <h1 class="text-big" id="web">
+                    Universidade Lusófona - Licenciatura em Engenharia Informática
+                </h1>
+                <h3>
+                    <br>
+                    <p class="center"><u>TFCs do DEISI</u></p>
+                </h3>
+                 
+                <p class="text-small">
+                    O Trabalho Final de Curso (TFC) é um elemento fundamental do currículo da Licenciaturas, funcionando como um momento nuclear na formação dos alunos, nomeadamente em ordem à
+                    promoção da sua integração profissional e/ou iniciação ao trabalho científico.
+                    O TFC deve corresponder a um projecto aplicado na área objecto de estudo, podendo incluir a realização de projectos de produção de soluções relevantes para os conteúdos dos curso,
+                    desenvolvimento de software ou projectos de índole mais teórica ou académica. O TFC deve conduzir a resultados finais susceptíveis de utilização em contexto real (aparelho, programa, método, modelo conceptual, contributo para investigação ou conclusões sobre um problema).
+
+                </p>
+                
+ 
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<div class="title3">
+    <h2><a href="https://github.com/ULHT-PW/tfcs-repo">====Relatórios disponíveis dos diferentes TFCs (Clica-me!!)====</a></h2>
+</div>
+    <div class="title4">
+
+        <table>
+            <thead>
+                <tr>
+                    <th style="text-align:center;">Autores</th>
+                    <th style="text-align:center;">Orientadores</th>
+                    <th style="text-align:center;">Ano</th>
+                    <th style="text-align:center;">Titulo</th>
+                    <th style="text-align:center;">Resumo</th>
+                    <th style="text-align:center;">Links para github</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for tfcsDeisi in tfcs %}
+                    <tr>
+                        <td style="text-align:center;">{{ tfcsDeisi.autores }}</td>
+                        <td style="text-align:center;">{{ tfcsDeisi.orientadores }}</td>
+                        <td style="text-align:center;">{{ tfcsDeisi.ano }}</td>
+                        <td style="text-align:center;">{{ tfcsDeisi.titulo }}</td>
+                        <td style="text-align:center;">{{ tfcsDeisi.resumo }}</td>
+                        <td style="text-align:center;">{{ tfcsDeisi.link }}</td>
+                       
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+    </div>
+   
+</div>
+
+
+{% endblock %}
+
+
+
+
+
+
+
+

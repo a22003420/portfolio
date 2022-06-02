@@ -3,7 +3,7 @@
 
 
 
-{% load static %}  
+{% load static %}
 
 {% block style %}
 <link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/estilos_indexcopy2.css' %}" media="screen" />
@@ -13,6 +13,7 @@
 
 
 {% block main %}
+
 <body>
 
     <h1 class="title">Carta de apresentação</h1>
@@ -20,51 +21,59 @@
 
     <ul>
 
-    <div>
-        <nav>
-            <br>
-            
-            
-            <p class="change">&#10035; Optei por este curso, pois é uma área em constante evolução</p>
-           
-            <p class="change">&#10035; O curso está muito bem estruturado, conseguindo um overview de todo o ramo da informática</p>
-            
-            <p class="change"> &#10035; Gostaria de trabalhar em segurança informática quando terminar o curso</p>
-                        
-            
-            <br>
-        </nav>
-    </div>
+        <div>
+            <nav>
+                <br>
 
-       
-            <p class="change1">&#9755; nome: João Matos</p>
-        
-        
-            <p class="change1">&#9755; número de aluno: 22003420</p>
-       
-      
-            <p class="change1">&#9755; curso: LEI&#128512;</p>
-       
-      
-            <p class="change1">&#9755; ano: 2ºano; 2ºsemestre</p>
-        
-            <p class="change1">&#9755; Universidade: ULHT</p>
-        
+
+                <p class="change">&#10035; Optei por este curso, pois é uma área em constante evolução</p>
+
+                <p class="change">&#10035; O curso está muito bem estruturado, conseguindo um overview de todo o ramo da
+                    informática</p>
+
+                <p class="change"> &#10035; Gostaria de trabalhar em segurança informática quando terminar o curso</p>
+
+
+                <br>
+            </nav>
+        </div>
+
+
+        <p class="change1">&#9755; nome: João Matos</p>
+
+
+        <p class="change1">&#9755; número de aluno: 22003420</p>
+
+
+        <p class="change1">&#9755; curso: LEI&#128512;</p>
+
+
+        <p class="change1">&#9755; ano: 2ºano; 2ºsemestre</p>
+
+        <p class="change1">&#9755; Universidade: ULHT</p>
+
     </ul>
 
     <div class="title3">
         <h2>"Querer é poder" (Provérbio Português)</h2>
-        
-        
+
+
     </div>
 
     <div class="title3">
         <h2><a href="https://github.com/a22003420">====My Projects====</a></h2>
-        
-        
+
+
+
     </div>
 
 
+    <div class="title4">
+        <h2><a href="{% url 'portfolio:projectos' %}">====Acede a TFCs do DEISI====</a></h2>
+
+
+    </div>
+    
 </body>
 {% endblock %}
 
@@ -76,4 +85,3 @@
 
 {% load static %}
 <img src="{% static 'portfolio/images/image1.png' %}">
-

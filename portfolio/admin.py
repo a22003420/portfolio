@@ -20,7 +20,10 @@ class PostAdmin (admin.ModelAdmin):
 
     list = ('autor', 'data', 'titulo','descricao')
     search_list = ['autor', 'data', 'titulo','descricao']
-    
+
+class TfcsDeisiAdmin (admin.ModelAdmin):
+    list = ('autor', 'data', 'titulo','resumo')
+    search_list = ['autor', 'data', 'titulo','resumo']
 
 
 class CompetenciaAdmin(admin.ModelAdmin):
@@ -33,4 +36,5 @@ admin.site.register(Pessoa, PessoaAdmin)
 admin.site.register(Competencia, CompetenciaAdmin)
 admin.site.register(Tecnologia, TecnologiaAdmin)
 admin.site.register(Post, PostAdmin)
+admin.site.register(TfcsDeisi, TfcsDeisiAdmin)
 

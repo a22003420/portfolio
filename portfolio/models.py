@@ -31,7 +31,17 @@ class Post (models.Model):
      descricao=models.TextField()    
      link=models.URLField(null=True,blank=True)
      foto = models.ImageField(upload_to=resolution_path,default="foto.png")
-     
+
+class TfcsDeisi (models.Model):
+    
+     autor=models.CharField(max_length=20)
+     orientador=models.CharField(max_length=20)
+     data=models.DateField(auto_now_add=True)
+     titulo=models.CharField(max_length=20)
+     resumo=models.TextField()    
+     link=models.URLField(null=True,blank=True)
+     relatorio=models.TextField()  
+     imagem = models.ImageField(upload_to=resolution_path,default="imagem.png")
 
 class Cadeira(models.Model):
 
