@@ -38,3 +38,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Host': 'covid-19-tracking.p.rapidapi.com',
+		'X-RapidAPI-Key': 'ed1c1ef4b8msheec033fa498f060p18a1cfjsn00e4fc492429'
+	}
+};
+
+fetch('https://covid-19-tracking.p.rapidapi.com/v1/portugal', options)
+	.then(response => {
+        return response.json()
+    })
+        .then(response => {
+            console.log(response);
+            var covid = 'Ligação com a API do covid mostrando o País em questão: ' + response.Country_text;
+            document.getElementById('covid').innerHTML = covid;
+    })
+    
+
+
+});

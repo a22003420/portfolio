@@ -33,15 +33,21 @@ class Post (models.Model):
      foto = models.ImageField(upload_to=resolution_path,default="foto.png")
 
 class TfcsDeisi (models.Model):
+
+        ANO = (
+        (2020, '2020'),
+        (2021, '2021'),
+        (2022, '2022'),
+    )
     
-     autor=models.CharField(max_length=20)
-     orientador=models.CharField(max_length=20)
-     data=models.DateField(auto_now_add=True)
-     titulo=models.CharField(max_length=20)
-     resumo=models.TextField()    
-     link=models.URLField(null=True,blank=True)
-     relatorio=models.TextField()  
-     imagem = models.ImageField(upload_to=resolution_path,default="imagem.png")
+        autor=models.CharField(max_length=20)
+        orientador=models.CharField(max_length=20)
+        ano=models.IntegerField(choices=ANO,default='2021')
+        titulo=models.CharField(max_length=20)
+        resumo=models.TextField()    
+        link=models.URLField(null=True,blank=True)
+        relatorio=models.TextField()  
+        imagem = models.ImageField(upload_to=resolution_path,default="imagem.png")
 
 class Cadeira(models.Model):
 

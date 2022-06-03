@@ -22,8 +22,8 @@ class PostAdmin (admin.ModelAdmin):
     search_list = ['autor', 'data', 'titulo','descricao']
 
 class TfcsDeisiAdmin (admin.ModelAdmin):
-    list = ('autor', 'data', 'titulo','resumo')
-    search_list = ['autor', 'data', 'titulo','resumo']
+    list = ('autor', 'ano', 'titulo','resumo')
+    search_list = ['autor', 'ano', 'titulo','resumo']
 
 
 class CompetenciaAdmin(admin.ModelAdmin):
