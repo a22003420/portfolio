@@ -62,3 +62,27 @@ fetch('https://covid-19-tracking.p.rapidapi.com/v1/portugal', options)
 
 
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Host': 'covid-193.p.rapidapi.com',
+            'X-RapidAPI-Key': 'ed1c1ef4b8msheec033fa498f060p18a1cfjsn00e4fc492429'
+        }
+    };
+    
+    fetch('https://covid-193.p.rapidapi.com/countries', options)
+        .then(response => {
+            return response.json()
+        })
+            .then(response => {
+                console.log(response);
+                var covid1 = 'Ligação com a API do covid mostrando todos os países registados na base de dados da mesma até ao momento começados com a letra "Z": ' + response.response[233] + ' e ' + response.response[234] + '.';
+                document.getElementById('covid_paises_registados').innerHTML = covid1;
+        })
+        
+    
+    
+    });
