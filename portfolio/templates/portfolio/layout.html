@@ -1,30 +1,53 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="pt-pt">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <meta name="description" content=""/>
-    <meta name="author" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
     <title>Portfolio - João Matos</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    {% load static %}  
+    {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/estilos_indexcopy2.css' %}" media="screen" />
     <link rel="shortcut icon" href="{% static 'portfolio/images/favicon.ico' %}" />
     {% block style %}
-    
+
     {% endblock %}
 
 </head>
 
 <body>
     <header>
-        <style display:flex;justify-content:spacebetween></style>
-        <div>João Pedro Matos</div>
+    
+        <div class="test">João Pedro Matos</div>
+        <div id="data-hora"></div>
+
+        <script>
+
+            const zeroFill = n => {
+                return ('0' + n).slice(-2);
+            }
+
+
+            const interval = setInterval(() => {
+
+                const now = new Date();
+
+
+                const dataHora = zeroFill(now.getUTCDate()) + '/' + zeroFill((now.getMonth() + 1)) + '/' + now.getFullYear() + ' ' + zeroFill(now.getHours()) + ':' + zeroFill(now.getMinutes()) + ':' + zeroFill(now.getSeconds());
+
+
+                document.getElementById('data-hora').innerHTML = dataHora;
+            }, 1000);
+
+        </script>
+
         <nav>
-            <a href="{% url 'portfolio:home' %}">home</a>      
-            <a href="{% url 'portfolio:mim' %}">sobre mim</a>      
-            <a href="{% url 'portfolio:licenciatura' %}">licenciatura</a>   
+            <a href="{% url 'portfolio:home' %}">home</a>
+            <a href="{% url 'portfolio:mim' %}">sobre mim</a>
+            <a href="{% url 'portfolio:licenciatura' %}">licenciatura</a>
             <a href="{% url 'portfolio:blog' %}">blog</a>
             <a href="{% url 'portfolio:quizz' %}">quizz</a>
             <a href="{% url 'portfolio:api' %}">APIs</a>
@@ -34,17 +57,17 @@
             <a href="{% url 'logout' %}">logout</a>
             {% else %}
             <a href="{% url 'login' %}">login</a>
-            {% endif %}       
-            
-                 
-        </nav>   
+            {% endif %}
+
+
+        </nav>
+
         
-        </style>
 
     </header>
 
 
-	<main>
+    <main>
 
         {% block main %}
 
@@ -62,7 +85,7 @@
 
     {% block extra_js %}
 
-    
+
     {% endblock extra_js %}
 
 </body>

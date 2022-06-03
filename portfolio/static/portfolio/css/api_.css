@@ -1,0 +1,26 @@
+.changes{
+
+    height: 10vh; 
+    color: black;
+    font-style:italic;
+    top: 0;  
+    background-color: antiquewhite;
+    /* alinhando logo e menu */
+    display:flex;
+    justify-content: center;  
+    align-items: center;
+
+}
+
+.changes1{
+
+  height: 15vh; 
+  color: black;
+  top: 0;
+  background: purple;
+  /* alinhando logo e menu */
+  display:flex;
+  justify-content: center;  
+  align-items: center;
+
+}

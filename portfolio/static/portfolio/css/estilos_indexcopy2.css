@@ -4,7 +4,13 @@
   font-family: 'Syne Mono', monospace;
   margin: 0;
   box-sizing:border-box;
-  
+}
+
+#data-hora{
+  color:khaki;
+  background-color: black;
+  font-style:italic;
+  font-size: 1.5em;
 }
 
 .change{
@@ -40,8 +46,7 @@
 }
 
 header {
-  height: 10vh; 
-  background: purple;
+  height: 15vh; 
   color: white;
   top: 0;  
   
@@ -53,16 +58,119 @@ header {
 }
 
 
-header {
-  height: 10vh; 
-  background: purple;
-  color: white;
-  top: 0;  
+
+@media only screen and (max-height: 600px ) {
+
+  #data-hora{
+    color:khaki;
+    background-color: black;
+    font-style:italic;
+    font-size: 1em;
+  }
+
+  .test{
+    font-size: 0.9em;  
+    padding: 1em;
+    color: black;
+    font-weight: bold;
+  }
   
-  /* alinhando logo e menu */
+
+  header {
+    height: 15vh; 
+    width: 50vw;
+    background-color: purple;
+    top: 0;  
+    
+    /* alinhando logo e menu */
+    display:flex;
+    background-color: purple;
+    justify-content: space-between;  
+    align-items: center;
+    font-size: 1em;
+  }
+
+
+header nav {
   display:flex;
-  justify-content: space-between;  
-  align-items: center;
+  justify-content: flex-end;
+}
+
+main{
+  background-color: blueviolet;
+}
+
+
+nav a {
+  padding: 0.5em;
+  text-decoration: none;
+  font-size: 1em;
+  color: lightgray;
+  background-color: purple;
+}
+
+}
+
+
+
+
+@media only screen and (max-width: 600px ) {
+
+  #data-hora{
+    color:khaki;
+    background-color: black;
+    font-style:italic;
+    font-size: 1em;
+  }
+
+  .test{
+    font-size: 0.9em;  
+    padding: 1em;
+    color: black;
+    font-weight: bold;
+  }
+  
+
+  header {
+    height: 15vh; 
+    width: 50vw;
+    background: purple;
+    color: white;
+    top: 0;  
+    
+    /* alinhando logo e menu */
+    display:flex;
+    background-color: purple;
+    justify-content: space-between;  
+    align-items: center;
+    font-size: 1em;
+  }
+
+
+header nav {
+  display:flex;
+  justify-content: flex-end;
+  background-color: purple;
+}
+
+main{
+  background-color: blueviolet;
+}
+
+
+nav a {
+  padding: 0.5em;
+  text-decoration: none;
+  font-size: 1em;
+  color: lightgray;
+  background-color: purple;
+}
+
+}
+
+
+.change_v1{
+  background-color: purple;
 }
 
 header div {
