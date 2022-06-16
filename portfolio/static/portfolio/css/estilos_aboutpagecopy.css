@@ -64,7 +64,7 @@
 
 	.firstsection {
 		background-color: #B721FF;
-		height: 400px;
+		height: 200px;
 	}
 
 	.secondsection {
@@ -171,6 +171,31 @@
 		justify-content: center;
 		align-items: center;
 		font-size: 1rem;      
-		height: 15vh;
+		height: 10vh;
 	  
 	  }
+
+	  .title4{
+  
+		background-color:#B721FF;
+		color: black;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 1rem;      
+		height: 65vh;
+	  
+	  }
+
+	  .title5{
+  
+		background-color:#B721FF;
+		color: black;
+		display: flex;
+		justify-content:center;
+		align-items: center;
+		font-size: 1rem;      
+		height: 20vh;
+	  
+	  }
+

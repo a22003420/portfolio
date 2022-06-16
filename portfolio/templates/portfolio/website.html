@@ -3,7 +3,7 @@
 
 
 
-{% load static %}  
+{% load static %}
 
 {% block style %}
 <link rel="stylesheet" type="text/css" href="{% static 'portfolio/css/estilos_aboutpagecopy.css' %}" media="screen" />
@@ -16,38 +16,61 @@
 
 
 {% block main %}
-	
 
 
-    <section class="firstsection">
-        <div class="box-main">
-            <div class="firstHalf">
-                <h1 class="text-big" id="web">
-                <p>Programação Web</p> 
-                </h1>
-                 
-                <p class="text-small">
-                    <p>Este site foi desenvolido no âmbito da cadeira de Programação Web com Front-End development em HTML, CSS e JavaScript e Back-End development em Django.</p>
-                    
 
-                </p>
-                
- 
-            </div>
+<section class="firstsection">
+    <div class="box-main">
+        <div class="firstHalf">
+            <h1 class="text-big" id="web">
+                <p>Programação Web</p>
+            </h1>
+
+            <p class="text-small">
+            <p>Este site foi desenvolido no âmbito da cadeira de Programação Web com Front-End development em HTML, CSS
+                e JavaScript e Back-End development em Django.</p>
+
+
+            </p>
+
+
         </div>
-    </section>
+    </div>
+</section>
+
+
+</div>
+
+<div class="title5">
+    <h2>====Video====</h2>
+
+</div>
+
+<div class="title4">
+    <h2><iframe width="820" height="615" src="https://www.youtube.com/embed/paWxElgUgH8" frameborder="0"
+            allowfullscreen></iframe>
+    </h2>
 
 </div>
 
 <div class="title3">
-    <h2><a href="https://www.ulusofona.pt/licenciaturas/engenharia-informatica/programacao-web/ULHT260-11195">====Página da Cadeira====</a></h2>
-    
-   
+
+</div>
+
 </div>
 
 <div class="title3">
-    <h3><p>{{ dataHora }} em {{ local }}.</p></h3>
-    
+    <h2><a href="https://www.ulusofona.pt/licenciaturas/engenharia-informatica/programacao-web/ULHT260-11195">====Página
+            da Cadeira====</a></h2>
+
+
+</div>
+
+<div class="title3">
+    <h3>
+        <p>{{ dataHora }} em {{ local }}.</p>
+    </h3>
+
 
 </div>
 
